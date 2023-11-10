@@ -1,0 +1,52 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ristinolla01.PelaajanTiedotPage">
+    <!-- Pääasettelu on ruudukko, jossa on 11 riviä ja 2 saraketta. -->
+    <Grid Padding="20" RowSpacing="20" ColumnSpacing="20">
+        <!-- Rivien määrittely -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- Sarakkeiden määrittely -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Käyttäjän syötekentät -->
+        <Entry x:Name="FirstNameEntry" Placeholder="Etunimi" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Entry x:Name="LastNameEntry" Placeholder="Sukunimi" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <!-- Numeronäppäimistö syntymävuodelle -->
+        <Entry x:Name="BirthYearEntry" Placeholder="Syntymävuosi" Keyboard="Numeric" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <!-- Valitsin olemassa olevien pelaajien valitsemiseen -->
+        <Picker x:Name="ExistingPlayersPicker" Title="Valitse pelaaja" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <!-- Aloita- ja Peruuta-painikkeet -->
+        <Button x:Name="Startbutton" Text="Aloita" Clicked="OnStartGameButtonClicked" Grid.Row="4" Grid.Column="0"/>
+        <Button Text="Peruuta" Clicked="OnCancelClicked" Grid.Row="4" Grid.Column="1"/>
+
+        <!-- Pelin tilastot -->
+        <Label x:Name="VoitotLabel" Text="Voitot:" Grid.Row="5" Grid.Column="0"/>
+        <Label x:Name="TappiotLabel" Text="Tappiot:" Grid.Row="6" Grid.Column="0"/>
+        <Label x:Name="TasapelitLabel" Text="Tasapelit:" Grid.Row="7" Grid.Column="0"/>
+        <Label x:Name="averageGameDurationLabel" Text="Keskiarvoinen pelin kesto: " Grid.Row="7" Grid.Column="1" />
+        <Label x:Name="ComputerVoitotLabel" Text="Tietokoneen voitot: 0" Grid.Row="8" Grid.Column="0"/>
+        <Label x:Name="ComputerTappiotLabel" Text="Tietokoneen tappiot: 0" Grid.Row="9" Grid.Column="0"/>
+        <Label x:Name="ComputerTasapelitLabel" Text="Tietokoneen tasapelit: 0" Grid.Row="10" Grid.Column="0"/>
+
+        <!-- Radiopainikkeet pelitilan valitsemiseen -->
+        <RadioButton x:Name="PlayerVsAI" Content="Pelaaja vs. Tekoäly" IsChecked="True" Grid.Row="5" Grid.Column="1"/>
+        <RadioButton x:Name="PlayerVsPlayer" Content="Pelaaja vs. Pelaaja" Grid.Row="6" Grid.Column="1"/>
+
+    </Grid>
+
+</ContentPage>

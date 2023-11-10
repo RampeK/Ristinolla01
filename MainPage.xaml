@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ristinolla01.MainPage">
+
+    <Grid BackgroundColor="DarkGray" ColumnSpacing="5" RowSpacing="5">
+        <!-- Määritellään rivit -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
+           
+
+        </Grid.RowDefinitions>
+        <!-- Määritellään sarakkeet -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Vuoron näyttö, joka kertoo kumman pelaajan vuoro on -->
+        <Label 
+            x:Name="TurnLabel"
+            Text="Player X's Turn"
+            FontSize="20"
+            TextColor="White"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+        />
+
+        <!-- Sulje peli -nappi -->
+        <Button x:Name="QuitButton" Text="Lopeta peli" Clicked="QuitButton_Clicked"
+            Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"
+            HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+            BackgroundColor="Red" />
+        
+
+
+        <!-- Pelinapit (3x3 ruudukko) -->
+        <!-- Rivi 1 -->
+        <Button x:Name="Button1" Grid.Row="1" Grid.Column="0" BackgroundColor="BlueViolet" CornerRadius="0" FontSize="130" Text="" TextColor="White"/>
+        <Button x:Name="Button2" Grid.Row="1" Grid.Column="1" BackgroundColor="BlueViolet" CornerRadius="0" FontSize="130" Text="" TextColor="White"/>
+        <Button x:Name="Button3" Grid.Row="1" Grid.Column="2" BackgroundColor="BlueViolet" CornerRadius="0" FontSize="130" Text="" TextColor="White"/>
+
+        <!-- Rivi 2 -->
+        <Button x:Name="Button4" Grid.Row="2" Grid.Column="0" BackgroundColor="BlueViolet" CornerRadius="0" FontSize="130" Text="" TextColor="White"/>
+        <Button x:Name="Button5" Grid.Row="2" Grid.Column="1" BackgroundColor="BlueViolet" CornerRadius="0" FontSize="130" Text="" TextColor="White"/>
+        <Button x:Name="Button6" Grid.Row="2" Grid.Column="2" BackgroundColor="BlueViolet" CornerRadius="0" FontSize="130" Text="" TextColor="White"/>
+
+        <!-- Rivi 3 -->
+        <Button x:Name="Button7" Grid.Row="3" Grid.Column="0" BackgroundColor="BlueViolet" CornerRadius="0" FontSize="130" Text="" TextColor="White"/>
+        <Button x:Name="Button8" Grid.Row="3" Grid.Column="1" BackgroundColor="BlueViolet" CornerRadius="0" FontSize="130" Text="" TextColor="White"/>
+        <Button x:Name="Button9" Grid.Row="3" Grid.Column="2" BackgroundColor="BlueViolet" CornerRadius="0" FontSize="130" Text="" TextColor="White"/>
+
+        
+    </Grid>
+</ContentPage>
+
+                
